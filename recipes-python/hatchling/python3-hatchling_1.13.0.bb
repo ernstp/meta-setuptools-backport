@@ -8,7 +8,8 @@ inherit pypi python_hatchling
 DEPENDS += "python3-pluggy-native python3-pathspec-native python3-packaging-native python3-editables-native"
 DEPENDS:remove:class-native = "python3-hatchling-native"
 
-SRC_URI[sha256sum] = "5b36c903d4d76790b1c1f2b7c8f5446fb733fab6ce39b203401d2337d441b411"
+SRC_URI[md5sum] = "7e53e46346684fd772f45866464c43e7"
+SRC_URI[sha256sum] = "f8d275a2cc720735286b7c2e2bc35da05761e6d3695c2fa416550395f10c53c7"
 
 do_compile:prepend() {
     export PYTHONPATH=src
