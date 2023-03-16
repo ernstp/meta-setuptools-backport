@@ -4,7 +4,8 @@ SECTION = "devel/python"
 LICENSE = "MPL-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=815ca599c9df247a0c7f619bab123dad"
 
-SRC_URI[sha256sum] = "56200de4077d9d0791465aa9095a01d421861e405b5096955051deefd697d6f6"
+SRC_URI[md5sum] = "22d173ba2a5912738b2b70e93a0d4b5f"
+SRC_URI[sha256sum] = "2798de800fa92780e33acca925945e9a19a133b715067cf165b8866c15a31687"
 
 inherit pypi python_setuptools_build_meta
 
