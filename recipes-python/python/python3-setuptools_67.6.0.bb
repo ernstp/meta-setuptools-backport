@@ -8,10 +8,10 @@ inherit pypi python_setuptools_build_meta
 
 SRC_URI:append:class-native = " file://0001-conditionally-do-not-fetch-code-by-easy_install.patch"
 
-SRC_URI += "file://0001-change-shebang-to-python3.patch \
-            file://0001-_distutils-sysconfig.py-make-it-possible-to-substite.patch"
+SRC_URI[md5sum] = "a65b043b901dd32f717c57ccf0975c4c"
+SRC_URI += "file://0001-_distutils-sysconfig.py-make-it-possible-to-substite.patch"
 
-SRC_URI[sha256sum] = "a7620757bf984b58deaf32fc8a4577a9bbc0850cf92c20e1ce41c38c19e5fb75"
+SRC_URI[sha256sum] = "2ee892cd5f29f3373097f5a814697e397cf3ce313616df0af11231e2ad118077"
 
 DEPENDS += "${PYTHON_PN}"
 
