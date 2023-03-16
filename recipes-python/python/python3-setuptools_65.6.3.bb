@@ -20,7 +20,7 @@ BBCLASSEXTEND = "native nativesdk"
 # The pkg-resources module can be used by itself, without the package downloader
 # and easy_install. Ship it in a separate package so that it can be used by
 # minimal distributions.
-PACKAGES += "${PYTHON_PN}-pkg-resources "
+PACKAGES =+ "${PYTHON_PN}-pkg-resources "
 FILES:${PYTHON_PN}-pkg-resources = "${PYTHON_SITEPACKAGES_DIR}/pkg_resources/*"
 RDEPENDS:${PYTHON_PN}-pkg-resources = "\
     ${PYTHON_PN}-compression \
