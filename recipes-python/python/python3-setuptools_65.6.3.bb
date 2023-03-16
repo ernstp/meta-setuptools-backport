@@ -15,6 +15,26 @@ SRC_URI[sha256sum] = "a7620757bf984b58deaf32fc8a4577a9bbc0850cf92c20e1ce41c38c19
 
 DEPENDS += "${PYTHON_PN}"
 
+RDEPENDS:${PN} = "\
+    ${PYTHON_PN}-2to3 \
+    ${PYTHON_PN}-compile \
+    ${PYTHON_PN}-compression \
+    ${PYTHON_PN}-ctypes \
+    ${PYTHON_PN}-email \
+    ${PYTHON_PN}-html \
+    ${PYTHON_PN}-json \
+    ${PYTHON_PN}-netserver \
+    ${PYTHON_PN}-numbers \
+    ${PYTHON_PN}-pickle \
+    ${PYTHON_PN}-pkgutil \
+    ${PYTHON_PN}-plistlib \
+    ${PYTHON_PN}-shell \
+    ${PYTHON_PN}-stringold \
+    ${PYTHON_PN}-threading \
+    ${PYTHON_PN}-unittest \
+    ${PYTHON_PN}-xml \
+"
+
 BBCLASSEXTEND = "native nativesdk"
 
 # The pkg-resources module can be used by itself, without the package downloader
@@ -28,6 +48,11 @@ RDEPENDS:${PYTHON_PN}-pkg-resources = "\
     ${PYTHON_PN}-plistlib \
     ${PYTHON_PN}-pprint \
 "
+# Due to the way OE-Core implemented native recipes, the native class cannot
+# have a dependency on something that is not a recipe name. Work around that by
+# manually setting RPROVIDES.
+RDEPENDS:${PN}:append = " ${PYTHON_PN}-pkg-resources"
+RPROVIDES:append:class-native = " ${PYTHON_PN}-pkg-resources-native"
 
 # This used to use the bootstrap install which didn't compile. Until we bump the
 # tmpdir version we can't compile the native otherwise the sysroot unpack fails
