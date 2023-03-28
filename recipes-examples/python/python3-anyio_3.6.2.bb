@@ -12,7 +12,7 @@ DEPENDS += "${PYTHON_PN}-setuptools-scm-native"
 inherit pypi python_setuptools_build_meta
 
 RDEPENDS:${PN} += " \
-    ${PYTHON_PN}-idna \
     ${PYTHON_PN}-sniffio \
     ${PYTHON_PN}-typing-extensions \
+    ${PYTHON_PN}-idna \
 "
