@@ -21,3 +21,5 @@ inherit python_flit_core
 DEPENDS:remove:class-native = "python3-picobuild-native"
 
 BBCLASSEXTEND = "native nativesdk"
+
+SKIP_PYTHON_RDEP = "1"
